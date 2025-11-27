@@ -1,0 +1,418 @@
+@import "tailwindcss";
+
+/* =====================================================
+   VIEWPORT SETTINGS - Podesi min/max širine ovde!
+   ===================================================== */
+:root {
+  --vw-min: 320; /* Minimalna širina u px (bez 'px') */
+  --vw-max: 3840; /* Maksimalna širina u px (bez 'px') */
+}
+
+/* =====================================================
+   THEME COLORS - Dark & Light mode
+   ===================================================== */
+:root {
+  /* oklch - DARK MODE colors */
+  --bg-dark: oklch(0.1 0.02 192);
+  --bg: oklch(0.15 0.02 192);
+  --bg-light: oklch(0.2 0.02 192);
+  --text: oklch(0.96 0.04 192);
+  --text-muted: oklch(0.76 0.04 192);
+  --highlight: oklch(0.5 0.04 192);
+  --border: oklch(0.4 0.04 192);
+  --border-muted: oklch(0.3 0.04 192);
+  --primary: oklch(0.76 0.1 192);
+  --secondary: oklch(0.76 0.1 12);
+  --danger: oklch(0.7 0.05 30);
+  --warning: oklch(0.7 0.05 100);
+  --success: oklch(0.7 0.05 160);
+  --info: oklch(0.7 0.05 260);
+  --font-teko: var(--font-teko);
+  --font-space-grotesk: var(--font-space-grotesk);
+  --font-manrope: var(--font-manrope);
+  --shadow: oklch(0.15 0.02 192);
+}
+
+:root.light,
+html.light {
+  /* oklch - LIGHT MODE colors */
+  --bg-dark: oklch(0.92 0.02 192);
+  --bg: oklch(0.96 0.02 192);
+  --bg-light: oklch(1 0.02 192);
+  --text: oklch(0.15 0.04 192);
+  --text-muted: oklch(0.4 0.04 192);
+  --highlight: oklch(1 0.04 192);
+  --border: oklch(0.6 0.04 192);
+  --border-muted: oklch(0.7 0.04 192);
+  --primary: oklch(0.4 0.1 192);
+  --secondary: oklch(0.4 0.1 12);
+  --danger: oklch(0.5 0.05 30);
+  --warning: oklch(0.5 0.05 100);
+  --success: oklch(0.5 0.05 160);
+  --info: oklch(0.5 0.05 260);
+  --shadow: oklch(0.15 0.02 192);
+}
+
+/* =====================================================
+   TAILWIND THEME - Fluid Typography & Spacing
+   
+   KAKO MENJATI VELIČINE:
+   1. Promeni --vw-min i --vw-max na vrhu fajla
+   2. Dole promeni brojeve u clamp() za svaki size:
+      - Prvi broj = veličina na --vw-min (320px)
+      - Drugi broj = veličina na --vw-max (3840px)
+   
+   Primer: clamp(16px, 4vw, 24px)
+   → Na 320px ekranu = 16px
+   → Na 3840px ekranu = 24px
+   → Između = glatko skalira
+   ===================================================== */
+@theme {
+  /* =====================================================
+     FONT SIZES - Promeni min i max kako god hoćeš!
+     ===================================================== */
+  --font-size-xs: clamp(12px, 0.375rem + 0.5vw, 14px); /* 12px → 14px */
+  --font-size-sm: clamp(14px, 0.4375rem + 0.5vw, 16px); /* 14px → 16px */
+  --font-size-base: clamp(16px, 0.5rem + 0.5vw, 18px); /* 16px → 18px */
+  --font-size-lg: clamp(18px, 0.5625rem + 0.5vw, 20px); /* 18px → 20px */
+  --font-size-xl: clamp(20px, 0.625rem + 1vw, 24px); /* 20px → 24px */
+  --font-size-2xl: clamp(24px, 0.75rem + 2vw, 32px); /* 24px → 32px */
+  --font-size-3xl: clamp(32px, 1rem + 2vw, 40px); /* 32px → 40px */
+  --font-size-4xl: clamp(40px, 1.25rem + 2vw, 48px); /* 40px → 48px */
+  --font-size-5xl: clamp(48px, 1.5rem + 4vw, 64px); /* 48px → 64px */
+  --font-size-6xl: clamp(64px, 2rem + 4vw, 80px); /* 64px → 80px */
+  --font-size-7xl: clamp(80px, 2.5rem + 4vw, 96px); /* 80px → 96px */
+  --font-size-8xl: clamp(96px, 3rem + 4vw, 112px); /* 96px → 112px */
+  --font-size-9xl: clamp(128px, 4rem + 8vw, 160px); /* 128px → 160px */
+
+  /* =====================================================
+     LINE HEIGHTS - Optimizovani za svaku veličinu
+     ===================================================== */
+  --line-height-xs: 1.5;
+  --line-height-sm: 1.5;
+  --line-height-base: 1.6;
+  --line-height-lg: 1.6;
+  --line-height-xl: 1.4;
+  --line-height-2xl: 1.3;
+  --line-height-3xl: 1.2;
+  --line-height-4xl: 1.2;
+  --line-height-5xl: 1.1;
+  --line-height-6xl: 1;
+  --line-height-7xl: 1;
+  --line-height-8xl: 0.95;
+  --line-height-9xl: 0.9;
+
+  /* =====================================================
+     SPACING - 8pt Grid, promeni min/max kako god hoćeš!
+     ===================================================== */
+  --spacing-0: 0; /* 0px */
+  --spacing-0\.5: 4px; /* 4px (fiksno) */
+  --spacing-1: clamp(8px, 0.25rem + 2vw, 16px); /* 8px → 16px */
+  --spacing-1\.5: clamp(12px, 0.375rem + 3vw, 24px); /* 12px → 24px */
+  --spacing-2: clamp(16px, 0.5rem + 4vw, 32px); /* 16px → 32px */
+  --spacing-2\.5: clamp(20px, 0.625rem + 5vw, 40px); /* 20px → 40px */
+  --spacing-3: clamp(24px, 0.75rem + 6vw, 48px); /* 24px → 48px */
+  --spacing-3\.5: clamp(28px, 0.875rem + 7vw, 56px); /* 28px → 56px */
+  --spacing-4: clamp(32px, 1rem + 8vw, 64px); /* 32px → 64px */
+  --spacing-5: clamp(40px, 1.25rem + 10vw, 80px); /* 40px → 80px */
+  --spacing-6: clamp(48px, 1.5rem + 12vw, 96px); /* 48px → 96px */
+  --spacing-7: clamp(56px, 1.75rem + 14vw, 112px); /* 56px → 112px */
+  --spacing-8: clamp(64px, 2rem + 16vw, 128px); /* 64px → 128px */
+  --spacing-9: clamp(72px, 2.25rem + 18vw, 144px); /* 72px → 144px */
+  --spacing-10: clamp(80px, 2.5rem + 20vw, 160px); /* 80px → 160px */
+  --spacing-11: clamp(88px, 2.75rem + 22vw, 176px); /* 88px → 176px */
+  --spacing-12: clamp(96px, 3rem + 24vw, 192px); /* 96px → 192px */
+  --spacing-14: clamp(112px, 3.5rem + 28vw, 224px); /* 112px → 224px */
+  --spacing-16: clamp(128px, 4rem + 32vw, 256px); /* 128px → 256px */
+  --spacing-20: clamp(160px, 5rem + 40vw, 320px); /* 160px → 320px */
+  --spacing-24: clamp(192px, 6rem + 48vw, 384px); /* 192px → 384px */
+  --spacing-28: clamp(224px, 7rem + 56vw, 448px); /* 224px → 448px */
+  --spacing-32: clamp(256px, 8rem + 64vw, 512px); /* 256px → 512px */
+  --spacing-36: clamp(288px, 9rem + 72vw, 576px); /* 288px → 576px */
+  --spacing-40: clamp(320px, 10rem + 80vw, 640px); /* 320px → 640px */
+}
+
+/* =====================================================
+   BODY STYLES
+   ===================================================== */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* =====================================================
+   TYPOGRAPHY CLASSES
+   Koristi: <h1 className="text-4xl">Naslov</h1>
+   ===================================================== */
+.text-xs {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  letter-spacing: 0.01em;
+}
+.text-sm {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  letter-spacing: 0.01em;
+}
+.text-base {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: 0;
+}
+.text-lg {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+  letter-spacing: 0;
+}
+.text-xl {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  letter-spacing: -0.01em;
+}
+.text-2xl {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-2xl);
+  letter-spacing: -0.01em;
+}
+.text-3xl {
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-3xl);
+  letter-spacing: -0.02em;
+}
+.text-4xl {
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-4xl);
+  letter-spacing: -0.02em;
+}
+.text-5xl {
+  font-size: var(--font-size-5xl);
+  line-height: var(--line-height-5xl);
+  letter-spacing: -0.02em;
+}
+.text-6xl {
+  font-size: var(--font-size-6xl);
+  line-height: var(--line-height-6xl);
+  letter-spacing: -0.03em;
+}
+.text-7xl {
+  font-size: var(--font-size-7xl);
+  line-height: var(--line-height-7xl);
+  letter-spacing: -0.03em;
+}
+.text-8xl {
+  font-size: var(--font-size-8xl);
+  line-height: var(--line-height-8xl);
+  letter-spacing: -0.04em;
+}
+.text-9xl {
+  font-size: var(--font-size-9xl);
+  line-height: var(--line-height-9xl);
+  letter-spacing: -0.05em;
+}
+
+.font-teko {
+  font-family: var(--font-teko);
+}
+
+.font-space-grotesk {
+  font-family: var(--font-space-grotesk);
+}
+
+.font-manrope {
+  font-family: var(--font-manrope);
+}
+
+.creative_eye:hover #bg {
+  fill: #fff38f;
+}
+
+.creative_eye:hover #eye,
+.creative_eye:hover #main_eye {
+  fill: #007d77;
+}
+
+.creative_eye:hover #filmproduction,
+.creative_eye:hover #shape {
+  fill: #f0613d;
+}
+
+.az:hover #bg {
+  fill: #161032;
+}
+.az:hover #az {
+  fill: #c4f1be;
+}
+
+.b_mitch:hover #bg {
+  fill: #2d1115;
+}
+
+.b_mitch:hover #b_mitch {
+  fill: #ff9f1c;
+}
+
+.dj_cat:hover #bg {
+  fill: #627e37;
+}
+
+.dj_cat:hover #macka_oci,
+.dj_cat:hover #bg_vinil,
+.dj_cat:hover #shadow {
+  fill: #172a3a;
+}
+
+.dj_cat:hover #macka_glava,
+.dj_cat:hover #macka_nos {
+  fill: #ffc482;
+}
+
+.dj_cat:hover #linije {
+  fill: #d6efff;
+}
+
+.evans_moto:hover #bg {
+  fill: #220c10;
+}
+
+.evans_moto:hover #evans_moto {
+  fill: #fe5f55;
+}
+
+.saccones_pizza:hover #bg {
+  fill: #414535;
+}
+
+.saccones_pizza:hover #logo_bg {
+  fill: #c9cebd;
+}
+
+.saccones_pizza:hover #pizza_logo {
+  fill: #19297c;
+}
+
+.future_classic:hover #bg {
+  fill: #2a2c24;
+}
+
+.future_classic:hover #future {
+  fill: #d4af37;
+}
+
+.weyh:hover #bg {
+  fill: #220901;
+}
+
+.weyh:hover #weyh_logo {
+  fill: #bbd8b3;
+}
+
+.larsen:hover #bg {
+  fill: #202a25;
+}
+
+.larsen:hover #larsen_logo {
+  fill: #26f0f1;
+}
+
+.happy_vet:hover #bg {
+  fill: #310d20;
+}
+
+.happy_vet:hover #vet {
+  fill: #ffc4d1;
+}
+
+.happy_vet:hover #happy {
+  fill: #efaac4;
+}
+
+.green_market:hover #bg {
+  fill: #797b84;
+}
+
+.green_market:hover #green_market {
+  fill: #070707;
+}
+
+.green_market:hover #list {
+  fill: #a5ffd6;
+}
+
+.lemon_software:hover #bg {
+  fill: #1e2a3e;
+}
+
+.lemon_software:hover #lemon {
+  fill: #fbf4a2;
+}
+
+.lyft_logo:hover #bg {
+  fill: #37323e;
+}
+
+.lyft_logo:hover #lyft_symbol {
+  fill: #bfbdc1;
+}
+
+.lyft_logo:hover #lyft {
+  fill: #6d6a75;
+}
+
+.panetteria:hover #bg {
+  fill: #2a2c24;
+}
+
+.panetteria:hover #paneteria_logo {
+  fill: #e0a458;
+}
+
+.small_house:hover #bg {
+  fill: #220901;
+}
+
+.small_house:hover #text {
+  fill: #adc698;
+}
+
+.small_house:hover #sm_logo {
+  fill: #d0e3c4;
+}
+
+.swm_logo:hover #bg {
+  fill: #465775;
+}
+
+.swm_logo:hover #smw {
+  fill: #e9ebf8;
+}
+
+.palms_logo:hover #bg {
+  fill: #2a2c24;
+}
+.palms_logo:hover #palms_logo {
+  fill: #fff38f;
+}
+
+.evans_moto *,
+.dj_cat *,
+.az *,
+.creative_eye *,
+.b_mitch *,
+.saccones_pizza *,
+.future_classic *,
+.weyh *,
+.larsen *,
+.happy_vet *,
+.green_market *,
+.lemon_software *,
+.lyft_logo *,
+.panetteria *,
+.small_house *,
+.swm_logo *,
+.palms_logo * {
+  transition: fill 0.3s ease-in-out;
+}
