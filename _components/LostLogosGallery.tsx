@@ -15,6 +15,11 @@ import Panneteria from "./svg/logo_gallery/panetteria";
 import SmallHouse from "./svg/logo_gallery/small_house";
 import Swm_logo from "./svg/logo_gallery/smw";
 import PalmsLogo from "./svg/logo_gallery/palms_logo";
+import SixEye from "./svg/logo_gallery/6eye";
+import Evergreen from "./svg/logo_gallery/evergreen";
+import Fractal from "./svg/logo_gallery/fractal";
+import Finanacie from "./svg/logo_gallery/financie";
+
 
 const logos = [
   { component: CreativeEye, className: "creative_eye" },
@@ -29,18 +34,24 @@ const logos = [
   { component: SacconesPizza, className: "saccones_pizza" },
   { component: HappyVet, className: "happy_vet" },
   { component: PalmsLogo, className: "palms_logo" },
+  { component: Evergreen, className: "evergreen" },
   { component: Az, className: "az" },
   { component: DjCat, className: "dj_cat" },
   { component: Swm_logo, className: "swm_logo" },
   { component: FutureClassic, className: "future_classic" },
   { component: EvansMoto, className: "evans_moto" },
+  { component: SixEye, className: "six_eye" },
+  { component: Fractal, className: "fractal" },
+  { component: Finanacie, className: "finansije" },
+  
+  
 
   // dodaj još
 ];
 
 export default function LostLogosGallery() {
   return (
-    <div className="w-full rounded-sm border-2 border-(--border-muted) grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-2 p-1 lg:p-2">
+    <div className="w-full rounded-sm border-2 border-(--border-muted) grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-2 p-1 lg:p-2 mb-1 lg:mb-2">
       {logos.map(({ component: LogoComponent, className }, index) => (
         <div key={index} className={`logo ${className} hover:cursor-pointer`}>
           <LogoComponent className={`${className} w-full h-full`} />
