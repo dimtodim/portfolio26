@@ -397,6 +397,41 @@ body {
   fill: #fff38f;
 }
 
+.six_eye:hover #bg {
+  fill: #1f271b;
+}
+.six_eye:hover #sixeye_logo {
+  fill: #cf5c36;
+}
+
+.evergreen:hover #bg {
+  fill: #070707;
+}
+
+.evergreen:hover #logo {
+  fill: #f8aa03;
+}
+
+.evergreen:hover #text {
+  fill: #a4acb9;
+}
+
+.fractal:hover #bg {
+  fill: #2c2c54;
+}
+
+.fractal:hover #fractal {
+  fill: #f5d6ba;
+}
+
+.finansije:hover #bg {
+  fill: #30332e;
+}
+
+.finansije:hover #financie {
+  fill: #fffbfc;
+}
+
 .evans_moto *,
 .dj_cat *,
 .az *,
@@ -413,6 +448,10 @@ body {
 .panetteria *,
 .small_house *,
 .swm_logo *,
-.palms_logo * {
+.palms_logo *,
+.six_eye *,
+.evergreen *,
+.farctal *,
+.finansije * {
   transition: fill 0.3s ease-in-out;
 }
