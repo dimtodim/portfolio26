@@ -5,6 +5,10 @@ import NamaskarBack from "./svg/visit_cards/namaskar_back";
 import TexasFront from "./svg/visit_cards/texas_front";
 import MotoFront from "./svg/visit_cards/moto_front";
 import MotoBack from "./svg/visit_cards/moto_back";
+import GraysVintageFront from "./svg/visit_cards/graysvintage_front";
+import GraysVintageBack from "./svg/visit_cards/graysvintage_back";
+import ExoticDeliveryFront from "./svg/visit_cards/exoticdelivery_front";
+import ExoticDeliveryBack from "./svg/visit_cards/exoticdelivery_back";
 
 const visitCards = [
   { component: PhysiotherapistFront, className: "physiotherapist_front" },
@@ -13,6 +17,10 @@ const visitCards = [
   { component: NamaskarBack, className: "namaskar_back" },
   { component: MotoFront, className: "moto_front" },
   { component: MotoBack, className: "moto_back" },
+  { component: GraysVintageFront, className: "graysvintage_front" },
+  { component: GraysVintageBack, className: "graysvintage_back" },
+  { component: ExoticDeliveryFront, className: "exoticdelivery_front" },
+  { component: ExoticDeliveryBack, className: "exoticdelivery_back" },
 
   { component: TexasFront, className: "texas_front" },
 
