@@ -23,18 +23,16 @@ export default function Logo() {
         <div className="z-10 max-w-[46ch] w-full ml-auto text-right">
           <h1 className="font-teko text-3xl font-medium text-(--text-muted) py-3">
             {" "}
-            Welcome to my Logo Design Portfolio — where creativity meets
-            strategy.{" "}
+            I solve brand identity puzzles.{" "}
           </h1>
           <p className="font-manrope text-(--text) text-base opacity-90">
-            Explore logos crafted through competitive design challenges, each
-            capturing a brand&apos;s unique essence. My approach combines
-            strategic thinking, visual clarity, and lasting impact to create
-            memorable brand identities that work across all platforms. Whether
-            you&apos;re launching a startup or refreshing an established brand,
-            let&apos;s collaborate to create a logo that becomes the cornerstone
-            of your visual identity. Ready to transform your brand? Let&apos;s
-            get started.
+            When I say playground, I mean competitive design challenges where
+            multiple designers compete for a single winning design. This
+            environment has trained me to think quickly and develop a
+            well-designed logo that not only looks great, but also will perform
+            for many years. Take a look at my portfolio; if you see something
+            that resonates with you, we can collaborate to establish your
+            brand&#39;s visual identity.
           </p>
         </div>
         {/* Footer Section */}

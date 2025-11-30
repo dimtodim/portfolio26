@@ -12,15 +12,13 @@ export default function DesignContest() {
       </div>
       <div className="h-fit w-full">
         <div className="w-full h-auto flex justify-between p-1 lg:p-2">
-          <p className="font-manrope max-w-[42ch] text-base text-(--text)">
-            Welcome to my logo gallery created for various design contests.
-            These projects were developed in fast-paced environments that
-            required quick thinking, adaptability, and strong visual
-            decision-making. Each logo was crafted based on specific briefs,
-            research, sketching, and iterative refinement — with the goal of
-            creating identities that are memorable, functional, and visually
-            balanced. This selection includes works that were shortlisted,
-            recognized, or stood out among hundreds of submissions.
+          <p className="font-manrope max-w-[36ch] text-base text-(--text)">
+            This gallery features logos created for design competitions,
+            developed under fast-paced conditions that demanded quick thinking
+            and adaptability. Each concept was carefully researched, sketched,
+            and refined to create unique, functional, and recognizable
+            identities. Many of these logos were shortlisted or awarded among
+            thousands of submissions.
             <ArrowDownSvg className="h-4 text-(--text-muted) mt-4" />
           </p>
 
