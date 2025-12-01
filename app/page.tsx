@@ -11,6 +11,7 @@ import Vjezba from "@/_components/Vjezba";
 import OldCpuPcFanScene from "@/_components/OldCpuPcFanScene";
 import VokmenScene from "@/_components/VokmenScene";
 import Print from "@/_components/Print";
+import MainScene from "@/_components/MainScene";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         <div className="h-[270px]"></div>
         <OldCpuPcFanScene />
         <VokmenScene />
+        <MainScene />
       </Container>
     </>
   );
