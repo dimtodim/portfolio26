@@ -20,6 +20,7 @@ import Evergreen from "./svg/logo_gallery/evergreen";
 import Fractal from "./svg/logo_gallery/fractal";
 import Finanacie from "./svg/logo_gallery/financie";
 import Shamrock from "./svg/logo_gallery/shamrock";
+import Flavory from "./svg/logo_gallery/flavory";
 
 const logos = [
   { component: CreativeEye, className: "creative_eye" },
@@ -36,6 +37,7 @@ const logos = [
   { component: PalmsLogo, className: "palms_logo" },
   { component: SacconesPizza, className: "saccones_pizza" },
   { component: HappyVet, className: "happy_vet" },
+  { component: Flavory, className: "flavory" },
   { component: Az, className: "az" },
   { component: DjCat, className: "dj_cat" },
   { component: Swm_logo, className: "swm_logo" },
