@@ -10,6 +10,7 @@ import VisitCards from "@/_components/VisitCards";
 import Vjezba from "@/_components/Vjezba";
 import OldCpuPcFanScene from "@/_components/OldCpuPcFanScene";
 import VokmenScene from "@/_components/VokmenScene";
+import Print from "@/_components/Print";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <LogoMain />
         <DesignContest />
         <LostLogosGalerry />
+        <Print />
         <VisitCards />
         <Vjezba />
         <div className="h-[270px]"></div>

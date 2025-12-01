@@ -432,6 +432,22 @@ body {
   fill: #fffbfc;
 }
 
+.shamrock:hover #bg {
+  fill: #f7f06d;
+}
+
+.shamrock:hover #t_zelena {
+  fill: #2a4849;
+}
+
+.shamrock:hover #s_zelena {
+  fill: #3bb273;
+}
+
+.shamrock:hover #text {
+  fill: #a97c73;
+}
+
 .evans_moto *,
 .dj_cat *,
 .az *,
@@ -452,6 +468,7 @@ body {
 .six_eye *,
 .evergreen *,
 .farctal *,
-.finansije * {
+.finansije *,
+.shamrock * {
   transition: fill 0.3s ease-in-out;
 }
