@@ -31,6 +31,11 @@
   --font-space-grotesk: var(--font-space-grotesk);
   --font-manrope: var(--font-manrope);
   --shadow: oklch(0.15 0.02 192);
+  --c-1: oklch(0.96 0.04 192);
+  --c-2: oklch(0.86 0.04 192);
+  --c-3: oklch(0.7 0.04 192);
+  --c-4: oklch(0.5 0.04 192);
+  --c-5: oklch(0.32 0.04 192);
 }
 
 :root.light,
@@ -51,6 +56,11 @@ html.light {
   --success: oklch(0.5 0.05 160);
   --info: oklch(0.5 0.05 260);
   --shadow: oklch(0.15 0.02 192);
+  --c-1: oklch(0.6 0.02 192);
+  --c-2: oklch(0.48 0.02 192);
+  --c-3: oklch(0.38 0.02 192);
+  --c-4: oklch(0.3 0.02 192);
+  --c-5: oklch(0.22 0.02 192);
 }
 
 /* =====================================================
