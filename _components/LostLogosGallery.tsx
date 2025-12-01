@@ -19,7 +19,7 @@ import SixEye from "./svg/logo_gallery/6eye";
 import Evergreen from "./svg/logo_gallery/evergreen";
 import Fractal from "./svg/logo_gallery/fractal";
 import Finanacie from "./svg/logo_gallery/financie";
-
+import Shamrock from "./svg/logo_gallery/shamrock";
 
 const logos = [
   { component: CreativeEye, className: "creative_eye" },
@@ -31,10 +31,11 @@ const logos = [
   { component: GreenMarket, className: "green_market" },
   { component: LyftLogo, className: "lyft_logo" },
   { component: Weyh, className: "weyh" },
+  { component: Evergreen, className: "evergreen" },
+  { component: Shamrock, className: "shamrock" },
+  { component: PalmsLogo, className: "palms_logo" },
   { component: SacconesPizza, className: "saccones_pizza" },
   { component: HappyVet, className: "happy_vet" },
-  { component: PalmsLogo, className: "palms_logo" },
-  { component: Evergreen, className: "evergreen" },
   { component: Az, className: "az" },
   { component: DjCat, className: "dj_cat" },
   { component: Swm_logo, className: "swm_logo" },
@@ -43,8 +44,6 @@ const logos = [
   { component: SixEye, className: "six_eye" },
   { component: Fractal, className: "fractal" },
   { component: Finanacie, className: "finansije" },
-  
-  
 
   // dodaj još
 ];
