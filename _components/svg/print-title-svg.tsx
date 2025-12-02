@@ -5,7 +5,7 @@ interface PrintTitleSvgProps extends React.SVGProps<SVGSVGElement> {
 }
 
 export default function PrintTitleSvg({
-  fillColor = "var(--color-sky-50)",
+  fillColor,
   ...props
 }: PrintTitleSvgProps) {
   return (
