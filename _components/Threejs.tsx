@@ -2,7 +2,6 @@ import React from "react";
 import ArrowDownSvg from "./svg/arrow-down-svg";
 import ThreeTitleSvg from "./svg/three-title-svg";
 import TridDizajnSvg from "./svg/3d-dizajn-svg";
-import PatternCircleSvg from "./svg/pattern_circle_bg";
 import ThreeLogoSvg from "./svg/three-logo-svg";
 
 export default function Threejs() {
