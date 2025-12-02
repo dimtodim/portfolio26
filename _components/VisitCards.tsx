@@ -29,7 +29,7 @@ const visitCards = [
 
 export default function VisitCards() {
   return (
-    <div className="w-full rounded-sm border-2 border-(--border-muted) grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2 p-1 lg:p-2">
+    <div className="print_gallery rounded-sm border-2 border-(--border-muted) grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2 p-1 lg:p-2 mb-1 lg:mb-2">
       {visitCards.map(({ component: VisitCardComponent, className }, index) => (
         <div
           key={index}

@@ -7,7 +7,7 @@ import PatternCircleSvg from "./svg/pattern_circle_bg";
 
 export default function Print() {
   return (
-    <div className="logo flex flex-col w-full h-270 mb-1 lg:mb-2 rounded-sm border-2 border-(--border-muted) overflow-hidden">
+    <div className="print flex flex-col w-full h-270 mb-1 lg:mb-2 rounded-sm border-2 border-(--border-muted) overflow-hidden">
       {/* Header Section */}
       <section className="relative h-92 bg-(--bg-light) border-b-2 border-(--border-muted) px-1 lg:px-2 overflow-hidden rounded-sm z-10">
         <div className="relative h-full flex items-center">

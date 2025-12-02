@@ -52,7 +52,7 @@ const logos = [
 
 export default function LostLogosGallery() {
   return (
-    <div className="w-full rounded-sm border-2 border-(--border-muted) grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-2 p-1 lg:p-2 mb-1 lg:mb-2">
+    <div className="lost_logos w-full rounded-sm border-2 border-(--border-muted) grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-2 p-1 lg:p-2 mb-1 lg:mb-2">
       {logos.map(({ component: LogoComponent, className }, index) => (
         <div key={index} className={`logo ${className} hover:cursor-pointer`}>
           <LogoComponent className={`${className} w-full h-full`} />
