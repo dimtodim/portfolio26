@@ -4,7 +4,7 @@ import ArrowDownSvg from "./svg/arrow-down-svg";
 
 export default function DesignContest() {
   return (
-    <div className="w-full h-270 rounded-sm border-2 border-(--border-muted) flex flex-col justify-between mb-1 lg:mb-2">
+    <div className="design_contest w-full h-270 rounded-sm border-2 border-(--border-muted) flex flex-col justify-between mb-1 lg:mb-2">
       <div className="h-92 w-full">
         <div className="design_cotest h-92 rounded-sm border-b-2 border-(--border-muted) bg-(--bg-light) p-1 lg:p-2 flex items-center">
           <ContestSvg className="max-h-full text-(--text-muted)" />
