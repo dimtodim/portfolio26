@@ -2,7 +2,7 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
-import { OrbitControls, ContactShadows, Environment } from "@react-three/drei";
+import { OrbitControls, Environment } from "@react-three/drei";
 import Loader from "./Loader";
 import { OldCpuPcFan } from "./OldCpuPcFan";
 import Image from "next/image";
